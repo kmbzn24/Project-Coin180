@@ -1,17 +1,14 @@
 <?php
 session_start();
 include ("connect.php");
-
 $id = $_POST['id'];
 $password = $_POST['password'];
-
 $query = "select * from users where id = '$id' and password = '$password'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
-
 if ($id == $row['id'] && $password == $row['password']) {
    $_SESSION['id'] = $row['id'];
-   $_SESSION['성명'] = $row['성명'];
+   $_SESSION['name'] = $row['name'];
    $_SESSION['balance'] = $row['balance'];
    echo "<script>location.href='login.php';</script>";
 }

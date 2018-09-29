@@ -1,6 +1,5 @@
 <doctype html>
 <html>
-
   <body>
     <center>
       <form name = "signup" method="post" action="savuser.php">
@@ -9,7 +8,7 @@
         <br><br>
         <table border = 0>
           <tr>
-            <td> 성명 </td>
+            <td> 이름 </td>
             <td> <input type = "text" name = "name" size = 18> </td>
           </tr>
           <tr>
